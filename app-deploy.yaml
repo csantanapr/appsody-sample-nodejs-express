@@ -2,16 +2,17 @@ apiVersion: appsody.dev/v1beta1
 kind: AppsodyApplication
 metadata:
   name: appsody-sample-nodejs-express
+  namespace: kabanero-samples
 spec:
   # Add fields here
   version: 1.0.0
-  applicationImage: appsody-sample-nodejs-express 
+  applicationImage: appsody-sample-nodejs-express
   stack: nodejs-express
   service:
     type: NodePort
     port: 3000
     annotations:
-      prometheus.io/scrape: 'true'
+      prometheus.io/scrape: "true"
   readinessProbe:
     failureThreshold: 12
     httpGet:
