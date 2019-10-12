@@ -11,7 +11,7 @@ describe('Node.js Express Simple template', function () {
     describe('/ endpoint', function () {
         it('status', function (done) {
             request(url + '/', function (error, response, body) {
-                expect(response.statusCode).to.equal(200);
+                expect(response.statusCode).to.equal(400);
                 done();
             });
         });
